@@ -70,6 +70,7 @@ namespace CyberGuard1
            
             Chatbot bot = new Chatbot();
             bot.StartChat(name);
+            VoiceGreeting voice = new VoiceGreeting( );
         }
     }
 }
