@@ -1,5 +1,5 @@
-﻿using CyberGuard;
-using System.Reflection.Metadata.Ecma335;
+﻿using System;
+using CyberGuard;
 
 namespace CyberGuard1
 {
@@ -7,6 +7,7 @@ namespace CyberGuard1
     {
         static void Main(string[] args)
         {
+            // 🎨 ASCII ART
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine(@"
   /$$$$$$  /$$     /$$ /$$$$$$$  /$$$$$$$$ /$$$$$$$   /$$$$$$  /$$   /$$  /$$$$$$  /$$$$$$$  /$$$$$$$ 
@@ -18,19 +19,20 @@ namespace CyberGuard1
 |  $$$$$$/    | $$    | $$$$$$$/| $$$$$$$$| $$  | $$|  $$$$$$/|  $$$$$$/| $$  | $$| $$  | $$| $$$$$$$/
  \______/     |__/    |_______/ |________/|__/  |__/ \______/  \______/ |__/  |__/|__/  |__/|_______/ 
 ");
+            Console.ResetColor();
 
+            Console.WriteLine("========= Welcome to CyberGuard =========");
 
+            // 🔊 Voice Greeting
+            VoiceGreeting voice = new VoiceGreeting();
+            voice.PlayGreeting();
 
-            Console.WriteLine("======================================= Welcome to CyberGuard =======================================");
-
+            // 👤 NAME VALIDATION
             string name;
 
             while (true)
             {
-                Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.Write("Enter your Name: ");
-                Console.ResetColor();
-
                 name = Console.ReadLine();
 
                 if (string.IsNullOrWhiteSpace(name))
@@ -56,21 +58,14 @@ namespace CyberGuard1
                     continue;
                 }
 
-                break; // 
+                break;
             }
 
+            Console.WriteLine($"Hello {name}, welcome to CyberGuard!");
 
-
-
-
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"Hello {name}, I am here to help you stay safe all the time ");
-            Console.ResetColor();
-
-           
+            // 🤖 START CHATBOT
             Chatbot bot = new Chatbot();
             bot.StartChat(name);
-            VoiceGreeting voice = new VoiceGreeting( );
         }
     }
 }

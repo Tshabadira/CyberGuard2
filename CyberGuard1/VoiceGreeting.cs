@@ -1,20 +1,21 @@
-﻿using System.Media;
+﻿using System;
+using System.Media;
 
-namespace CyberGuard1
+namespace CyberGuard
 {
-    private void  VoiceGreeting()
+    internal class VoiceGreeting
     {
-        try {
-           string path = "welcome.wav";
-           SoundPlayer player = new SoundPlayer(path);
-              player.Load();
-                player.PlaySync();
-
-    }
-        catch (Exception ex)
+        public void PlayGreeting()
+        {
+            try
             {
-            Console.WriteLine("Voice greeting could not play");
-                Console.WriteLine($"An error occurred: {ex.Message}");
+                SoundPlayer player = new SoundPlayer("welcome.wav.wav");
+                player.PlaySync();
             }
-}
+            catch
+            {
+                Console.WriteLine("Voice file not found.");
+            }
+        }
+    }
 }
