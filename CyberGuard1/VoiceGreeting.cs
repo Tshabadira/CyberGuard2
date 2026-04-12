@@ -14,7 +14,9 @@ namespace CyberGuard
             }
             catch
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Voice file not found.");
+                Console.ResetColor();
             }
         }
     }
