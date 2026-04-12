@@ -87,4 +87,4 @@ Workflow file: `.github/workflows/dotnet.yml`
 
 ## 👤 Author
 
-**Lazarus Tshabadira Motsalane** — PROG6221 Portfolio of Evidence
+**Lazarus Tshabadira Motsalane** — PROG6221 Part 1
