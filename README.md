@@ -83,6 +83,9 @@ This project uses **GitHub Actions** to automatically build the solution on ever
 
 Workflow file: `.github/workflows/dotnet.yml`
 
+<img width="1432" height="597" alt="image" src="https://github.com/user-attachments/assets/b77d37dc-5607-47e6-b778-eaa65af30831" />
+
+
 ---
 
 ## 👤 Author
